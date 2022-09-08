@@ -3,7 +3,7 @@
     "question": "What is React?",
     "answer": 1,
     "options": [
-      "React is a HTMl library for creating forms.",
+      "React is a HTML library for creating forms.",
       "React is a JavaScript library for rendering user interfaces.",
       "React is a Java library for flexible user interfaces."
     ]
