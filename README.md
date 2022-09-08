@@ -1,34 +1,59 @@
+# Mongoose Exercise
+
+To work on this exercise use the `Use this template` button to create a copy to your GitHub account. Then clone this copy to your local computer.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
-
-First, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Task 1
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Create a new database called `quiz` and a collection called `questions` on your local MongoDB. You might use MongoDB Compass for it.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Add the questions from [data.json](./data.json) to your collection.
 
-## Learn More
+## Task 2
 
-To learn more about Next.js, take a look at the following resources:
+Create a file called `.env.local`. Store an environment variable called `MONGODB_URL` with the connection string provided by MongoDB.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Usually something like this:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+MONGODB_URL='mongodb://127.0.0.1:27017/<name-of-collection>'
+```
 
-## Deploy on Vercel
+Make sure to add the name of your collection to the url!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Task 3
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Create a file and a function called `dbConnect`. Write a function which establishes a database connection using `mongoose`.
+
+_Hint: you will need to install `mongoose` as a dependency first!_
+
+## Task 4
+
+Examin the data structure of the question objects in your database `quiz` collection.
+
+Write a schema which describes the data and create a model.
+
+## Task 5
+
+Open the file [pages/index.js](./pages/index.js). Insert code into the function `getServerSideProps` to load all questions from the database.
+
+You might create a service function for data retrieval first.
+
+Pass all questions as a prop to the index page.
+
+## Task 6
+
+Use the component `QuestionCard` to render all questions into the page content.
+
+_Hint: have a look what kind of props the component needs. You don't have to change any code in the component, only on the `index.js`!_
+
+✨ Yay, you did it! ✨
