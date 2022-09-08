@@ -28,7 +28,7 @@ Usually something like this:
 MONGODB_URL='mongodb://127.0.0.1:27017/<name-of-db>'
 ```
 
-Make sure to add the name of your collection to the url!
+Make sure to add the name of your database to the url!
 
 ## Task 3
 
