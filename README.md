@@ -25,7 +25,7 @@ Create a file called `.env.local`. Store an environment variable called `MONGODB
 Usually something like this:
 
 ```
-MONGODB_URL='mongodb://127.0.0.1:27017/<name-of-collection>'
+MONGODB_URL='mongodb://127.0.0.1:27017/<name-of-db>'
 ```
 
 Make sure to add the name of your collection to the url!
